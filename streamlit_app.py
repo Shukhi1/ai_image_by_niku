@@ -70,11 +70,11 @@ if uploaded_file:
     prediction = model.predict(img)[0][0]
 
     if prediction > 0.5:
-        label = "Ai generated Image"
+        label = "Real Image"
         color = "#28a745"
         confidence = prediction * 100
     else:
-        label = "Real Image"
+        label = "Ai generated Image"
         color = "#dc3545"
         confidence = (1 - prediction) * 100
 
